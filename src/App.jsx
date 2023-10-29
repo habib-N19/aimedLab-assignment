@@ -4,31 +4,40 @@ import LottieContainer from './components/LottieAnimation'
 
 import PasswordInput from './components/PasswordInput'
 import Terms from './components/Terms'
+import InputField from './components/InputField'
 
 const App = () => {
   const Container = styled.div`
-    max-width: 70vw;
+    @media screen and (min-width: 768px) {
+      max-width: 70vw;
+      height: 90vh;
+      align-items: center;
+      justify-content: space-between;
+      display: flex;
+    }
     width: 100%;
+    max-width: 100vw;
     margin: 0 auto;
-    height: 90vh;
-    margin: 0 auto;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
   `
   const LeftImg = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    height: 400px;
+    /* display: none; */
+    /* width: 40%; */
+    /* height: 400px; */
     padding: 20px;
+    width: 40%;
+    @media screen and (max-width: 768px) {
+      display: none !important;
+    }
   `
   const RightSideLoginSection = styled.div`
-    width: 60%;
+    @media screen and (min-width: 768px) {
+      width: 60%;
+      padding: 40px;
+      margin: 0 auto;
+    }
+    max-width: 100vw;
+    /* border: 1px solid black; */
     /* text-align: center; */
-    margin: 0 auto;
-    padding: 40px;
   `
   const Heading = styled.h2`
     text-align: center;
@@ -36,15 +45,15 @@ const App = () => {
     font-weight: bold;
   `
 
-  const InputContainer = styled.div`
-    position: relative;
-    display: flex;
-    align-items: center;
-    border: 1px solid #04072f66;
-    border-radius: 8px;
-    padding: 10px;
-    width: 60%;
-  `
+  // const InputContainer = styled.div`
+  //   position: relative;
+  //   display: flex;
+  //   align-items: center;
+  //   border: 1px solid #04072f66;
+  //   border-radius: 8px;
+  //   padding: 10px;
+  //   width: 60%;
+  // `
   const Input = styled.input`
     /* flex: 1; */
     border: none;
@@ -71,9 +80,9 @@ const App = () => {
       <RightSideLoginSection>
         <Heading>Login</Heading>
         <Label htmlFor='email'>Login ID</Label>
-        <InputContainer>
+        <InputField>
           <Input type='email' placeholder='Enter Login ID'></Input>
-        </InputContainer>
+        </InputField>
         <Label htmlFor='password'>Password</Label>
         <PasswordInput></PasswordInput>
         <Terms />

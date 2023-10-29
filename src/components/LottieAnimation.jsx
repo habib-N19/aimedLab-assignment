@@ -8,6 +8,9 @@ const LottieContainer = () => {
     align-items: center;
     justify-content: center;
     /* max-height: 100vh; */
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   `
   return (
     <LottieContainer>
