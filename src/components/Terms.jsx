@@ -6,19 +6,26 @@ const Terms = () => {
   const [agreeToTerms, setAgreeToTerms] = useState(false)
   const TermsContainer = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
     margin-top: 15px;
     margin-bottom: 15px;
-    width: 80%;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
   `
   const RememberMeCheckbox = styled.label`
     display: flex;
     align-items: center;
     margin-right: 15px;
     cursor: pointer;
+    width: 100%;
   `
   const ResetPassword = styled.a`
     text-decoration: none;
@@ -27,6 +34,7 @@ const Terms = () => {
   const AgreeToTermsCheckbox = styled.label`
     display: flex;
     align-items: center;
+    width: 100%;
     cursor: pointer;
   `
   const CheckboxInput = styled.input`
@@ -49,8 +57,8 @@ const Terms = () => {
           checked={agreeToTerms}
           onChange={() => setAgreeToTerms(!agreeToTerms)}
         />
-        I agree to{' '}
-        <a href='/terms' style={{ color: '#F78719' }}>
+        I agree to{'  '}
+        <a href='/terms' style={{ marginLeft: '4px', color: '#F78719' }}>
           Terms and Conditions
         </a>
       </AgreeToTermsCheckbox>

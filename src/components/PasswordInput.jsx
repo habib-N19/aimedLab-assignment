@@ -2,6 +2,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import { FiEye, FiEyeOff } from 'react-icons/fi'
 import InputField from './InputField'
+import Input from './Input'
 const PasswordInput = () => {
   const [showPassword, setShowPassword] = useState(false)
   const [password, setPassword] = useState('')
@@ -17,15 +18,15 @@ const PasswordInput = () => {
   //     border-radius: 8px;
   //     padding: 10px;
   //   `
-  const Input = styled.input`
-    /* flex: 1; */
-    /* width: 70%; */
-    @media screen and (max-width: 768px) {
-      width: 100%;
-    }
-    border: none;
-    outline: none;
-  `
+  //   const Input = styled.input`
+  //     /* flex: 1; */
+  //     /* width: 70%; */
+  //     @media screen and (max-width: 768px) {
+  //       width: 100%;
+  //     }
+  //     border: none;
+  //     outline: none;
+  //   `
   const ToggleBtn = styled.button`
     position: absolute;
     top: 50%;

@@ -5,6 +5,7 @@ import LottieContainer from './components/LottieAnimation'
 import PasswordInput from './components/PasswordInput'
 import Terms from './components/Terms'
 import InputField from './components/InputField'
+import Input from './components/Input'
 
 const App = () => {
   const Container = styled.div`
@@ -20,9 +21,6 @@ const App = () => {
     margin: 0 auto;
   `
   const LeftImg = styled.div`
-    /* display: none; */
-    /* width: 40%; */
-    /* height: 400px; */
     padding: 20px;
     width: 40%;
     @media screen and (max-width: 768px) {
@@ -36,8 +34,6 @@ const App = () => {
       margin: 0 auto;
     }
     max-width: 100vw;
-    /* border: 1px solid black; */
-    /* text-align: center; */
   `
   const Heading = styled.h2`
     text-align: center;
@@ -45,26 +41,19 @@ const App = () => {
     font-weight: bold;
   `
 
-  // const InputContainer = styled.div`
-  //   position: relative;
-  //   display: flex;
-  //   align-items: center;
-  //   border: 1px solid #04072f66;
-  //   border-radius: 8px;
-  //   padding: 10px;
-  //   width: 60%;
-  // `
-  const Input = styled.input`
-    /* flex: 1; */
-    border: none;
-    outline: none;
+  const SubmissionContainer = styled.div`
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
   `
   const SubmitButton = styled.button`
     background-color: #1575a7;
     color: white;
     border-radius: 8px;
     font-weight: 500;
-    width: 45%;
+    width: 50%;
+    margin-left: auto;
+    margin: 0 auto;
     padding: 10px;
   `
   const CreateAccountLink = styled.div`
@@ -86,15 +75,17 @@ const App = () => {
         <Label htmlFor='password'>Password</Label>
         <PasswordInput></PasswordInput>
         <Terms />
-        <SubmitButton>Login</SubmitButton>
-        <CreateAccountLink>
-          <p>
-            Don&apos;t Have and account ?{' '}
-            <a style={{ color: '#F78719' }} href='/create-account'>
-              Register Here
-            </a>
-          </p>
-        </CreateAccountLink>
+        <SubmissionContainer>
+          <SubmitButton>Login</SubmitButton>
+          <CreateAccountLink>
+            <p>
+              Don&apos;t Have and account ?{' '}
+              <a style={{ color: '#F78719' }} href='/create-account'>
+                Register Here
+              </a>
+            </p>
+          </CreateAccountLink>
+        </SubmissionContainer>
       </RightSideLoginSection>
     </Container>
   )
