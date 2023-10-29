@@ -3,6 +3,7 @@ import Label from './components/InputLabel'
 import LottieContainer from './components/LottieAnimation'
 
 import PasswordInput from './components/PasswordInput'
+import Terms from './components/Terms'
 
 const App = () => {
   const Container = styled.div`
@@ -41,7 +42,14 @@ const App = () => {
     border: none;
     outline: none;
   `
-
+  const SubmitButton = styled.button`
+    background-color: #1575a7;
+    color: white;
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 10px;
+  `
+  co
   return (
     <Container>
       <LeftImg>
@@ -55,6 +63,8 @@ const App = () => {
         </InputContainer>
         <Label htmlFor='email'>Login ID</Label>
         <PasswordInput></PasswordInput>
+        <Terms />
+        <SubmitButton>Login</SubmitButton>
       </RightSideLoginSection>
     </Container>
   )
