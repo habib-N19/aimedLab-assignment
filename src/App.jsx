@@ -1,26 +1,41 @@
 import styled from 'styled-components'
-import LottieAnimation from './components/LottieAnimation'
+import Label from './components/InputLabel'
+import LottieContainer from './components/LottieAnimation'
 
 const App = () => {
   const Container = styled.div`
+    max-width: 100vw;
     display: flex;
-    justify-content: between;
-    align-items: center;
   `
   const LeftImg = styled.div`
-    width: 400px;
-    height: 400px;
+  display:flex;
+  justify-content:center;
+  align-items:center
+    width: 40%;
+    height:400px;
   `
   const RightSideLoginSection = styled.div`
-  width:90%,
+  width:60%
+  // border:1px, solid, black;
+  text-align:center;
+ margin:0 auto;
   height:90%,
   
+  `
+  const Heading = styled.h2`
+    text-align: center;
+    color: black;
+    font-weight: bold;
   `
   return (
     <Container>
       <LeftImg>
-        <LottieAnimation />
+        <LottieContainer />
       </LeftImg>
+      <RightSideLoginSection>
+        <Heading>Login</Heading>
+        <Label htmlFor='email'>Login ID</Label>
+      </RightSideLoginSection>
     </Container>
   )
 }
