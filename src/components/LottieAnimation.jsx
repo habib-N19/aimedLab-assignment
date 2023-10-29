@@ -4,10 +4,18 @@ import styled from 'styled-components'
 const LottieContainer = () => {
   const LottieContainer = styled.div`
     max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* max-height: 100vh; */
   `
   return (
     <LottieContainer>
-      <Lottie loop={true} animationData={login}></Lottie>
+      <Lottie
+        style={{ width: '100%', height: '100%' }}
+        loop={true}
+        animationData={login}
+      ></Lottie>
     </LottieContainer>
   )
 }

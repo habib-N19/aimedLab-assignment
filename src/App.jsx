@@ -7,8 +7,14 @@ import Terms from './components/Terms'
 
 const App = () => {
   const Container = styled.div`
-    max-width: 100vw;
+    max-width: 70vw;
+    width: 100%;
+    margin: 0 auto;
+    height: 90vh;
+    margin: 0 auto;
+    align-items: center;
     display: flex;
+    justify-content: space-between;
   `
   const LeftImg = styled.div`
     display: flex;
@@ -16,11 +22,13 @@ const App = () => {
     align-items: center;
     width: 40%;
     height: 400px;
+    padding: 20px;
   `
   const RightSideLoginSection = styled.div`
     width: 60%;
     /* text-align: center; */
     margin: 0 auto;
+    padding: 40px;
   `
   const Heading = styled.h2`
     text-align: center;
@@ -35,10 +43,10 @@ const App = () => {
     border: 1px solid #04072f66;
     border-radius: 8px;
     padding: 10px;
+    width: 60%;
   `
   const Input = styled.input`
     /* flex: 1; */
-    width: 70%;
     border: none;
     outline: none;
   `
@@ -47,9 +55,14 @@ const App = () => {
     color: white;
     border-radius: 8px;
     font-weight: 500;
+    width: 45%;
     padding: 10px;
   `
-  co
+  const CreateAccountLink = styled.div`
+    text-align: center;
+
+    margin-top: 20px;
+  `
   return (
     <Container>
       <LeftImg>
@@ -61,10 +74,18 @@ const App = () => {
         <InputContainer>
           <Input type='email' placeholder='Enter Login ID'></Input>
         </InputContainer>
-        <Label htmlFor='email'>Login ID</Label>
+        <Label htmlFor='password'>Password</Label>
         <PasswordInput></PasswordInput>
         <Terms />
         <SubmitButton>Login</SubmitButton>
+        <CreateAccountLink>
+          <p>
+            Don&apos;t Have and account ?{' '}
+            <a style={{ color: '#F78719' }} href='/create-account'>
+              Register Here
+            </a>
+          </p>
+        </CreateAccountLink>
       </RightSideLoginSection>
     </Container>
   )

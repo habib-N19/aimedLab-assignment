@@ -3,7 +3,8 @@ import styled from 'styled-components'
 const Label = styled.label`
   display: block;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
 `
 
 export default Label

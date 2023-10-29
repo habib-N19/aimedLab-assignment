@@ -10,6 +10,9 @@ const Terms = () => {
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 80%;
   `
   const RememberMeCheckbox = styled.label`
     display: flex;

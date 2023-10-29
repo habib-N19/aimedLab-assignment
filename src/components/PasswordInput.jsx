@@ -10,6 +10,7 @@ const PasswordInput = () => {
   const InputContainer = styled.div`
     position: relative;
     display: flex;
+    width: 60%;
     align-items: center;
     border: 1px solid #04072f66;
     border-radius: 8px;
