@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+// Container component for input fields, providing consistent spacing and alignment.
 
 const InputField = styled.div`
   position: relative;
@@ -8,7 +9,7 @@ const InputField = styled.div`
   width: 85%;
   /* margin: 0 auto; */
   @media screen and (min-width: 768px) {
-    max-width: 60%;
+    width: 60%;
     margin: 0 auto;
   }
 `

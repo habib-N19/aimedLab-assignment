@@ -1,9 +1,9 @@
 import styled from 'styled-components'
+// Styled label component for form fields, providing a consistent font weight and spacing.
 
 const Label = styled.label`
   display: block;
   font-weight: bold;
-  /* border: 1px solid black; */
   width: 60%;
   margin: 0 auto;
   margin-top: 5px;
